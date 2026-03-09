@@ -1,0 +1,77 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+}
+
+/* Header del dashboard */
+header {
+    background-color: #34495e;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Título dentro del header */
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* Contenedor de sidebar + contenido */
+.container {
+    display: flex;
+    margin-top: 80px; /* Ajusta según la altura del header */
+    min-height: calc(100vh - 80px); /* Que ocupe toda la altura visible */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #444;
+    color: white;
+    height: calc(100vh - 80px);
+    position: fixed; 
+    top: 100px; 
+    left: 0;
+    padding-top: 20px;
+    overflow-y: auto;
+    font-size: 24px;
+}
+
+/* Lista de la sidebar */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s; /* efecto suave */
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Contenido principal */
+.content {
+    margin-left: 200px; /* deja espacio para la sidebar */
+    padding: 20px;
+    width: calc(100% - 200px); /* asegura que no se solape con sidebar */
+}
